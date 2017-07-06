@@ -3,6 +3,8 @@
 ### Live Demo
 ##### For live demo you can checkout https://checkphish.ai
 
+### Current Clients
+Client in this repository is python client. Client in other languages are coming soon.
 
 ### Setup
 ###### First clone the repository

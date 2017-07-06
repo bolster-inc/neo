@@ -1,11 +1,17 @@
-### 1. Setup
+## RedMarlin Neo API -Artificial Intellgience Based RealTime Phishing Detection.
+
+### Live Demo
+##### For live demo you can checkout https://checkphish.ai
+
+
+### Setup
 ###### First clone the repository
      git clone git@github.com:redmarlinai/neo.git
 
 ###### Make sure you have python requests installed
      sudo pip install requests
 
-### 2. API KEY & URLS
+### API KEY & URLS
 ###### Request api key from https://redmarlin.ai/#!/contact-us and specify in the src/client.py file
       RM_API_KEY = '<YOUR-API-KEY>'
         
@@ -15,7 +21,7 @@
         'https://example.com'
     ]
 
-### 3. Run client
+###  Run client
 Sample client is client.py. At first client will submit all urls and then the apis will return the job_ids. Job_ids need to be store so they can be queried at a later time.
     
 ###

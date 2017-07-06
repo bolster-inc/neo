@@ -1,16 +1,22 @@
 ### 1. Setup
-sudo pip install requests
+###### First clone the repository
+     git clone git@github.com:redmarlinai/neo.git
+
+###### Make sure you have python requests installed
+     sudo pip install requests
 
 ### 2. API KEY & URLS
-Request api key fromhttps://redmarlin.ai/#!/contact-us and specify in the client
+###### Request api key from https://redmarlin.ai/#!/contact-us and specify in the src/client.py file
+      RM_API_KEY = '<YOUR-API-KEY>'
+        
+###### Now specifiy list of urls
+    # add urls here
+    urls_list = [
+        'https://example.com'
+    ]
 
-
-
-
-### 3. Code
-Sample client is client.py
-
-
+### 3. Run client
+Sample client is client.py. At first client will submit all urls and then the apis will return the job_ids. Job_ids need to be store so they can be queried at a later time.
     
 ###
  

@@ -12,9 +12,9 @@
 
 ### API KEY
 ###### Request api key from https://redmarlin.ai/#!/contact-us and specify in the src/client.py file
-      RM_API_KEY = '<YOUR-API-KEY>'
+      
         
-###### Usage
+### Usage
      python src/client.py -h
           usage: client.py [-h] -f FILE
 

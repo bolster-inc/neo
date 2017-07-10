@@ -10,8 +10,11 @@
      sudo pip install requests
 
 ### Setup
-###### Now clone the repository
+###### Now clone or download the respository
      git clone https://github.com/redmarlinai/neo.git
+###### if downloading then do
+	wget https://github.com/redmarlinai/neo/archive/master.zip
+	unzip master.zip
       
         
 ### Usage

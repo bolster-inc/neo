@@ -42,7 +42,7 @@
      suspicious.txt - all the urls that have been identify as suspicious
      pending.txt - all the urls that still being processed. Please query these urls again.
      
-#### A results summary will also be printed. Sample summary would look like
+#### A results summary will also be printed. Sample summary would look something like
 
 	================ SAVING RESULTS ===========================
 

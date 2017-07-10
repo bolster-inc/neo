@@ -1,4 +1,4 @@
-## RedMarlin Neo API -Artificial Intellgience Based RealTime Phishing Detection.
+## RedMarlin Neo API -Artificial Intellgience Based RealTime Phishing Detection
 
 ### Live Demo
 ##### For live demo you can checkout https://checkphish.ai

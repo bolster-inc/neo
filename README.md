@@ -61,5 +61,5 @@
 	Total clean urls:         34
 	
 ###  Support
-For any issues please follow instructions on this link for
+For any issues please follow instructions on this link
 ###### https://redmarlin.ai/#!/support

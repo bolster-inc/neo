@@ -33,4 +33,32 @@
 ###### now provide your API KEY and  file with urls to the client
       cd src/
       python client.py  -k <YOUR_API_KEY>  -f "urls.txt"
+
+
+### Results
+#### results will be saved in 4 different files in the same directory
+     phish.txt - all the urls that have been identified as phish
+     clean.txt - all the urls that have been identified as clean
+     suspicious.txt - all the urls that have been identify as suspicious
+     pending.txt - all the urls that still being processed. Please query these urls again.
+     
+#### A results summary will also be printed. Sample summary would look like
+
+================ SAVING RESULTS ===========================
+
+phish urls saved to file:       /home/john/projects/neo_client/pending.txt
+phish urls saved to file:       /home/john/projects/neo_client/phish.txt
+clean urls saved to file:       /home/john/projects/neo_client/clean.txt
+suspicious urls saved to file:  /home/john/projects/neo_client/suspicious.txt
+
+================ SCAN SUMMARY ===========================
+
+Total Urls submitted:     175
+Processing completed:     175
+Processing pending:       0
+Total phishing urls:      132
+Total suspicious urls:    9
+Total clean urls:         34
+
+     
       

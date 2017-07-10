@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 import requests
 import time
-
+import pprint
 
 class Neo:
     def __init__(self, api_key, api_host):
@@ -17,13 +17,12 @@ class Neo:
             'job_id': job_id
         }
         # avoid rate limit by the server
-        time.sleep(1)
         r = requests.post(api_end_point, json=payload)
 
         if r.status_code == requests.codes.ok:
             return r.json()
         else:
-            print(r.json)
+            pprint.pprint(r.json())
 
     def submit_url(self, url):
         end_point = '/neo/v1/lookup'
@@ -34,8 +33,9 @@ class Neo:
                 "url": url
             }
         }
+        time.sleep(0.5)
         r = requests.post(api_end_point, json=payload)
         if r.status_code == requests.codes.ok:
             return r.json()
         else:
-            print(r.json)
+            pprint.pprint(r.json())

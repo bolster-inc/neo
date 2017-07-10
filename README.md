@@ -44,21 +44,22 @@
      
 #### A results summary will also be printed. Sample summary would look like
 
-================ SAVING RESULTS ===========================
+	================ SAVING RESULTS ===========================
 
-phish urls saved to file:       /home/john/projects/neo_client/pending.txt
-phish urls saved to file:       /home/john/projects/neo_client/phish.txt
-clean urls saved to file:       /home/john/projects/neo_client/clean.txt
-suspicious urls saved to file:  /home/john/projects/neo_client/suspicious.txt
+	phish urls saved to file:       /home/john/projects/neo_client/pending.txt
+	phish urls saved to file:       /home/john/projects/neo_client/phish.txt
+	clean urls saved to file:       /home/john/projects/neo_client/clean.txt
+	suspicious urls saved to file:  /home/john/projects/neo_client/suspicious.txt
 
-================ SCAN SUMMARY ===========================
+	================ SCAN SUMMARY ===========================
 
-Total Urls submitted:     175
-Processing completed:     175
-Processing pending:       0
-Total phishing urls:      132
-Total suspicious urls:    9
-Total clean urls:         34
-
-     
-      
+	Total Urls submitted:     175
+	Processing completed:     175
+	Processing pending:       0
+	Total phishing urls:      132
+	Total suspicious urls:    9
+	Total clean urls:         34
+	
+###  Support
+     For any issues please follow instructions on this link for
+	https://redmarlin.ai/#!/support

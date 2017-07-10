@@ -11,7 +11,7 @@
 
 ### Setup
 ###### Now clone the repository
-     git clone git@github.com:redmarlinai/neo.git
+     git clone https://github.com/redmarlinai/neo.git
       
         
 ### Usage

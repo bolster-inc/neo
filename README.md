@@ -3,15 +3,15 @@
 ### Live Demo
 ##### For live demo you can checkout https://checkphish.ai
 
-### Setup
-###### First clone the repository
-     git clone git@github.com:redmarlinai/neo.git
+### API KEY
+###### Request api key from https://redmarlin.ai/#!/contact-us
 
 ###### Make sure you have python requests installed
      sudo pip install requests
 
-### API KEY
-###### Request api key from https://redmarlin.ai/#!/contact-us
+### Setup
+###### Now clone the repository
+     git clone git@github.com:redmarlinai/neo.git
       
         
 ### Usage
@@ -31,7 +31,7 @@
 
 ###  Run client     
 ###### now provide your API KEY and  file with urls to the client
-      cd src/
+      cd neo/src/
       python client.py  -k <YOUR_API_KEY>  -f "urls.txt"
 
 

@@ -11,7 +11,7 @@
      sudo pip install requests
 
 ### API KEY
-###### Request api key from https://redmarlin.ai/#!/contact-us and specify in the src/client.py file
+###### Request api key from https://redmarlin.ai/#!/contact-us
       
         
 ### Usage

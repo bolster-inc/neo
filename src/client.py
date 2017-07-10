@@ -9,9 +9,6 @@ import argparse
 import os
 from neo import neo
 
-# specify your api key
-# get your API Key by contacting redmarlin at support.redmarlin.ai
-RM_API_KEY = '<YOUR-API-KEY>'
 API_HOST = 'https://developers.redmarlin.ai/api'
 
 
@@ -104,12 +101,13 @@ def display_summary(results):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('-k', '--key', help='provide your api key', required=True)
     parser.add_argument('-f', '--file', help='file containing urls', required=True)
     args = parser.parse_args()
 
     wait_for_results = 5
 
-    neo_client = neo.Neo(RM_API_KEY, API_HOST)
+    neo_client = neo.Neo(args.key, API_HOST)
     jobs = submit_urls(neo_client, args.file)
 
     print('\n{0} urls submitted. Waiting {1}s for results'.format(len(jobs), wait_for_results))

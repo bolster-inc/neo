@@ -6,10 +6,11 @@
 ### API KEY
 ###### Request api key from https://redmarlin.ai/#!/contact-us
 
-###### Make sure you have python requests installed
-     sudo pip install requests
+
 
 ### Setup
+###### Make sure you have python requests installed
+     sudo pip install requests
 ###### Now clone or download the respository
      git clone https://github.com/redmarlinai/neo.git
 ###### if downloading then do

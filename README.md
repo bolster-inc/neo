@@ -4,7 +4,7 @@
 ##### For live demo you can checkout https://checkphish.ai
 
 ### API KEY
-###### Request api key from https://redmarlin.ai/#!/contact-us
+###### Request api key from https://www.redmarlin.ai/free-trial
 
 
 

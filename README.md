@@ -66,4 +66,4 @@
 	
 ###  Support
 For any issues please follow instructions on this link
-###### https://redmarlin.ai/#!/support
+###### https://www.redmarlin.ai/contact-us

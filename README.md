@@ -1,17 +1,21 @@
-## RedMarlin Neo API -Artificial Intellgience Based RealTime Phishing Detection.
+## RedMarlin Neo API -Artificial Intellgience Based RealTime Phishing Detection
 
 ### Live Demo
 ##### For live demo you can checkout https://checkphish.ai
 
-### Setup
-###### First clone the repository
-     git clone git@github.com:redmarlinai/neo.git
+### API KEY
+###### Request api key from https://www.redmarlin.ai/free-trial
 
+
+
+### Setup
 ###### Make sure you have python requests installed
      sudo pip install requests
-
-### API KEY
-###### Request api key from https://redmarlin.ai/#!/contact-us
+###### Now clone or download the respository
+     git clone https://github.com/redmarlinai/neo.git
+###### if downloading then do
+	wget https://github.com/redmarlinai/neo/archive/master.zip
+	unzip master.zip
       
         
 ### Usage
@@ -30,9 +34,9 @@
 
 
 ###  Run client     
-###### now provide your API KEY and  file with urls to the client
-      cd src/
-      python client.py  -k <YOUR_API_KEY>  -f "urls.txt"
+###### now provide your API KEY and  file with urls to scan to the client. Each url needs to be in a new line.
+      cd neo/src/
+      python client.py  -k <YOUR_API_KEY>  -f "urls_to_scan.txt"
 
 
 ### Results
@@ -42,7 +46,7 @@
      suspicious.txt - all the urls that have been identify as suspicious
      pending.txt - all the urls that still being processed. Please query these urls again.
      
-#### A results summary will also be printed. Sample summary would look like
+#### A results summary will also be printed. Sample summary would look something like
 
 	================ SAVING RESULTS ===========================
 
@@ -61,5 +65,5 @@
 	Total clean urls:         34
 	
 ###  Support
-     For any issues please follow instructions on this link for
-	https://redmarlin.ai/#!/support
+For any issues please follow instructions on this link
+###### https://www.redmarlin.ai/contact-us

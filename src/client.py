@@ -17,12 +17,12 @@ def submit_urls(neo_client, file_path):
     try:
         with open(file_path) as f:
             for url in f:
-                print('submitting url:  {0}'.format(url))
+                print('submitting url:  {0}'.format(url.rstrip()))
                 result = neo_client.submit_url(url)
                 if result:
                     jobs.append(result['job_id'])
     except Exception as e:
-        print('could not open file', file_path)
+        print('could not open file {0}'.format(e))
         sys.exit(-1)
     return jobs
 
@@ -105,6 +105,7 @@ def main():
     parser.add_argument('-f', '--file', help='file containing urls', required=True)
     args = parser.parse_args()
 
+    # increasing wait time further will result in fewer pending jobs
     wait_for_results = 5
 
     neo_client = neo.Neo(args.key, API_HOST)

@@ -34,9 +34,9 @@
 
 
 ###  Run client     
-###### now provide your API KEY and  file with urls to the client
+###### now provide your API KEY and  file with urls to scan to the client. Each url needs to be in a new line.
       cd neo/src/
-      python client.py  -k <YOUR_API_KEY>  -f "urls.txt"
+      python client.py  -k <YOUR_API_KEY>  -f "urls_to_scan.txt"
 
 
 ### Results

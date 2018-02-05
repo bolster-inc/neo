@@ -11,7 +11,6 @@ from neo import neo
 
 API_HOST = 'https://developers.redmarlin.ai/api'
 
-
 def submit_urls(neo_client, file_path):
     jobs = []
     try:
@@ -20,7 +19,7 @@ def submit_urls(neo_client, file_path):
                 print('submitting url:  {0}'.format(url.rstrip()))
                 result = neo_client.submit_url(url)
                 if result:
-                    jobs.append(result['job_id'])
+                    jobs.append(result['jobID'])
     except Exception as e:
         print('could not open file {0}'.format(e))
         sys.exit(-1)
@@ -30,6 +29,7 @@ def submit_urls(neo_client, file_path):
 def display_results(neo_client, jobs):
     for job in jobs:
         result = neo_client.get_job_status(job)
+        print(result)
         pprint.pprint(result)
 
 

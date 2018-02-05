@@ -43,19 +43,19 @@ def save_results(results, dir_path=''):
     print('\nphish urls saved to file:       {0}'.format(os.path.abspath(pending_file_path)))
     
     phish_file_path = dir_path + 'phish.txt'
-    with open(phish_file_path, 'w') as f:
+    with open(phish_file_path, 'a+') as f:
         for item in results['phish']:
             f.write(item['url'] + '\n')
     print('\nphish urls saved to file:       {0}'.format(os.path.abspath(phish_file_path)))
 
     clean_file_path = dir_path + 'clean.txt'
-    with open(clean_file_path, 'w') as f:
+    with open(clean_file_path, 'a+') as f:
         for item in results['clean']:
             f.write(item['url'] + '\n')
     print('clean urls saved to file:       {0}'.format(os.path.abspath(clean_file_path)))
 
     suspicious_file_path = dir_path + 'suspicious.txt'
-    with open(suspicious_file_path, 'w') as f:
+    with open(suspicious_file_path, 'a+') as f:
         for item in results['suspicious']:
             f.write(item['url'] + '\n')
     print('suspicious urls saved to file:  {0}'.format(os.path.abspath(suspicious_file_path)))

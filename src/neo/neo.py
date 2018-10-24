@@ -16,7 +16,7 @@ class Neo:
             'apiKey': self.api_key,
             'jobID': job_id
         }
-        # avoid rate limit by the server
+
         r = requests.post(api_end_point, json=payload)
 
         if r.status_code == requests.codes.ok:
@@ -34,6 +34,7 @@ class Neo:
             },
             "scanType": "full"
         }
+        # avoid rate limiting by the server, do not change this.
         time.sleep(0.5)
         r = requests.post(api_end_point, json=payload)
         if r.status_code == requests.codes.ok:

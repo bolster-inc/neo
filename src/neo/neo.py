@@ -31,7 +31,8 @@ class Neo:
             "apiKey": self.api_key,
             "urlInfo": {
                 "url": url
-            }
+            },
+            "scanType": "full"
         }
         time.sleep(0.5)
         r = requests.post(api_end_point, json=payload)

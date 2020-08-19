@@ -4,7 +4,7 @@
 ##### For live demo you can checkout https://checkphish.ai
 
 ### API KEY
-###### Request api key from https://www.redmarlin.ai/free-trial
+###### Request api key from https://bolster.ai/contact-us
 
 
 
@@ -66,4 +66,4 @@
 	
 ###  Support
 For any issues please follow instructions on this link
-###### https://www.redmarlin.ai/contact-us
+###### https://bolster.ai/contact-us

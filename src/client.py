@@ -14,7 +14,7 @@ API_HOST = 'https://developers.bolster.ai/api'
 def submit_urls(neo_client, file_path):
     jobs = []
     try:
-        with open(file_path) as f:
+        with open(file_path, 'r', encoding="utf8", errors='ignore') as f:
             for url in f:
                 print('submitting url:  {0}'.format(url.rstrip()))
                 result = neo_client.submit_url(url)
@@ -41,7 +41,7 @@ def save_results(results, dir_path=''):
         for item in results['pending']:
             f.write(item['url'] + '\n')
     print('\nphish urls saved to file:       {0}'.format(os.path.abspath(pending_file_path)))
-    
+
     phish_file_path = dir_path + 'phish.txt'
     with open(phish_file_path, 'a+') as f:
         for item in results['phish']:

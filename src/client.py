@@ -11,6 +11,7 @@ from neo import neo
 
 API_HOST = 'https://developers.bolster.ai/api'
 
+
 def submit_urls(neo_client, file_path):
     jobs = []
     try:
@@ -18,10 +19,11 @@ def submit_urls(neo_client, file_path):
             for url in f:
                 print('submitting url:  {0}'.format(url.rstrip()))
                 result = neo_client.submit_url(url)
+                print(result)
                 if result:
                     jobs.append(result['jobID'])
     except Exception as e:
-        print('could not open file {0}'.format(e))
+        print('could not process url {0}'.format(e))
         sys.exit(-1)
     return jobs
 
@@ -40,25 +42,29 @@ def save_results(results, dir_path=''):
     with open(pending_file_path, 'w') as f:
         for item in results['pending']:
             f.write(item['url'] + '\n')
-    print('\nphish urls saved to file:       {0}'.format(os.path.abspath(pending_file_path)))
+    print('\nphish urls saved to file:       {0}'.format(
+        os.path.abspath(pending_file_path)))
 
     phish_file_path = dir_path + 'phish.txt'
     with open(phish_file_path, 'a+') as f:
         for item in results['phish']:
             f.write(item['url'] + '\n')
-    print('\nphish urls saved to file:       {0}'.format(os.path.abspath(phish_file_path)))
+    print('\nphish urls saved to file:       {0}'.format(
+        os.path.abspath(phish_file_path)))
 
     clean_file_path = dir_path + 'clean.txt'
     with open(clean_file_path, 'a+') as f:
         for item in results['clean']:
             f.write(item['url'] + '\n')
-    print('clean urls saved to file:       {0}'.format(os.path.abspath(clean_file_path)))
+    print('clean urls saved to file:       {0}'.format(
+        os.path.abspath(clean_file_path)))
 
     suspicious_file_path = dir_path + 'suspicious.txt'
     with open(suspicious_file_path, 'a+') as f:
         for item in results['suspicious']:
             f.write(item['url'] + '\n')
-    print('suspicious urls saved to file:  {0}'.format(os.path.abspath(suspicious_file_path)))
+    print('suspicious urls saved to file:  {0}'.format(
+        os.path.abspath(suspicious_file_path)))
 
 
 def get_results(neo_client, jobs):
@@ -101,8 +107,10 @@ def display_summary(results):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-k', '--key', help='provide your api key', required=True)
-    parser.add_argument('-f', '--file', help='file containing urls', required=True)
+    parser.add_argument(
+        '-k', '--key', help='provide your api key', required=True)
+    parser.add_argument(
+        '-f', '--file', help='file containing urls', required=True)
     args = parser.parse_args()
 
     # increasing wait time further will result in fewer pending jobs
@@ -111,7 +119,8 @@ def main():
     neo_client = neo.Neo(args.key, API_HOST)
     jobs = submit_urls(neo_client, args.file)
 
-    print('\n{0} urls submitted. Waiting {1}s for results'.format(len(jobs), wait_for_results))
+    print('\n{0} urls submitted. Waiting {1}s for results'.format(
+        len(jobs), wait_for_results))
     # lets wait for results so they are ready
     time.sleep(wait_for_results)
 

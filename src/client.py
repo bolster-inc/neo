@@ -9,7 +9,7 @@ import argparse
 import os
 from neo import neo
 
-API_HOST = 'https://developers.bolster.ai/api'
+API_HOST = 'https://developers.checkphish.ai/api'
 
 
 def submit_urls(neo_client, file_path):

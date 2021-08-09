@@ -134,7 +134,6 @@ def main():
         '-c', '--column', help='column number', required=False)
     args = parser.parse_args()
 
-    print(args);
     # increasing wait time further will result in fewer pending jobs
     wait_for_results = 5
 

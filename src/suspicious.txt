@@ -1,2 +1,0 @@
-http://www.google.com,b,c,d/
-http://www.netflix.com,g,h,i/

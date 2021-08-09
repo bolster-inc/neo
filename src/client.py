@@ -27,7 +27,7 @@ def submit_urls(neo_client, file_path):
         sys.exit(-1)
     return jobs
 
-def submit_urlsWithDilimiter(neo_client, file_path, delimiter, column):
+def submit_urls_with_delimiter(neo_client, file_path, delimiter, column):
     jobs = []
     try:
         with open(file_path, 'r', encoding="utf8", errors='ignore') as f:
@@ -143,7 +143,7 @@ def main():
     if(delimiter is None and column is None):
         jobs= submit_urls(neo_client, args.file)
     else:
-        jobs = submit_urlsWithDilimiter(neo_client, args.file, delimiter, int(column))
+        jobs = submit_urls_with_delimiter(neo_client, args.file, delimiter, int(column))
 
     print('\n{0} urls submitted. Waiting {1}s for results'.format(
         len(jobs), wait_for_results))

@@ -27,6 +27,23 @@ def submit_urls(neo_client, file_path):
         sys.exit(-1)
     return jobs
 
+def submit_urls_with_delimiter(neo_client, file_path, delimiter, column):
+    jobs = []
+    try:
+        with open(file_path, 'r', encoding="utf8", errors='ignore') as f:
+            for url in f:
+                parts=url.split(delimiter)
+                submitUrl=parts[column-1].rstrip()
+                print('submitting url: ',submitUrl)
+                result = neo_client.submit_url(submitUrl)
+                print(result)
+                if result:
+                    jobs.append(result['jobID'])
+    except Exception as e:
+        print('could not process url {0}'.format(e))
+        sys.exit(-1)
+    return jobs
+
 
 def display_results(neo_client, jobs):
     for job in jobs:
@@ -111,13 +128,22 @@ def main():
         '-k', '--key', help='provide your api key', required=True)
     parser.add_argument(
         '-f', '--file', help='file containing urls', required=True)
+    parser.add_argument(
+        '-d', '--delimiter', help='delimter', required=False)
+    parser.add_argument(
+        '-c', '--column', help='column number', required=False)
     args = parser.parse_args()
 
     # increasing wait time further will result in fewer pending jobs
     wait_for_results = 5
 
     neo_client = neo.Neo(args.key, API_HOST)
-    jobs = submit_urls(neo_client, args.file)
+    delimiter = args.delimiter
+    column = args.column
+    if(delimiter is None and column is None):
+        jobs= submit_urls(neo_client, args.file)
+    else:
+        jobs = submit_urls_with_delimiter(neo_client, args.file, delimiter, int(column))
 
     print('\n{0} urls submitted. Waiting {1}s for results'.format(
         len(jobs), wait_for_results))

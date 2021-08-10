@@ -44,6 +44,11 @@
       cd neo/src/
       python client.py  -k <YOUR_API_KEY>  -f "urls_to_scan.txt"
 
+###### It accepts two optional paramaters. Multiple fields delimited by a character and we can choose the column with urls.
+
+     cd neo/src/
+     python client.py  -k <YOUR_API_KEY>  -f "urls_to_scan.txt" -d "specify_your_delimiter" -c <column_number_with_urls>
+
 ### Results
 
 #### results will be saved in 4 different files in the same directory

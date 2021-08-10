@@ -33,6 +33,8 @@
      required arguments:
           -k KEY, --key KEY     provide your api key
           -f FILE, --file FILE  file containing urls
+          -d DELIMITER, --delimiter DELIMITER  specify your delimter
+          -c COLUMN, --column COLUMN  provide your column number with urls
 
      optional arguments:
           -h, --help            show this help message and exit

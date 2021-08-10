@@ -129,9 +129,9 @@ def main():
     parser.add_argument(
         '-f', '--file', help='file containing urls', required=True)
     parser.add_argument(
-        '-d', '--delimiter', help='delimter', required=False)
+        '-d', '--delimiter', help='specify your delimter', required=False)
     parser.add_argument(
-        '-c', '--column', help='column number', required=False)
+        '-c', '--column', help='provide your column number with urls', required=False)
     args = parser.parse_args()
 
     # increasing wait time further will result in fewer pending jobs

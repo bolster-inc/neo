@@ -33,6 +33,8 @@
      required arguments:
           -k KEY, --key KEY     provide your api key
           -f FILE, --file FILE  file containing urls
+          -d DELIMITER, --delimiter DELIMITER  specify your delimter
+          -c COLUMN, --column COLUMN  provide your column number with urls
 
      optional arguments:
           -h, --help            show this help message and exit
@@ -43,6 +45,11 @@
 
       cd neo/src/
       python client.py  -k <YOUR_API_KEY>  -f "urls_to_scan.txt"
+
+###### It accepts two optional paramaters. Multiple fields delimited by a character and we can choose the column with urls.
+
+     cd neo/src/
+     python client.py  -k <YOUR_API_KEY>  -f "urls_to_scan.txt" -d "specify_your_delimiter" -c <column_number_with_urls>
 
 ### Results
 
